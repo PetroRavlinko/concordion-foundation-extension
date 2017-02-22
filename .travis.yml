@@ -11,6 +11,9 @@ after_success:
 - export COMMIT_MESSAGE="$(git log -1 --oneline)"
 - test "${TRAVIS_BRANCH}" == "master" && [[ $COMMIT_MESSAGE =~ .*"Make Release".*
   ]] && ./release.sh
+branches:
+  only:
+  - master
 env:
   global:
   - secure: QjKOu1PnUojXAt2tuz9FQnxgpKT12VP6/SujcskB5z0EK6OPr0zQthXXCYuUUXXH9IYvqO93JS31KrFG/CFpRYPWrzeiTR/szeaHKUnAi8JYorjY26kQ2ASJEcA6Nx+NyotG7p4lYJFis1snKzo9OziDHAENvu46VDFyvudDc9Y6HVjP3wChq+2lP9RJFnQtEn2MVG1JqW1V136q1grUvRVzFjUqAfaHIYxnBw9U0u6U+0892u5rUiP5Rj30WCSCb1lwfAX6CQEErhUfYyjH0GJBkD6rI4usW1/99SVlSfOk0d1MZe/yWQFYWGFbc0UorZCcq/LZ5M+XSB8ncY/CtFzymZ9Bg3gGPbxmskBH9z4RNeqdNMXqLtcXGTyIVuzcws/GHjhDrk/BmRseO17Nb2RtA1soyFN7dw76fcBcSitOPq3Cuw07EpVevAtYn5JvHTX3XEY/epCBj6NXdqBHYQH5AS1owW13cPHqXV2Nv16vSrFpXmLa9IT0AhEgjNB441UxtglkfvRdFOOzbDaOmywpz7DLci1tPGTO0/nNTM+KKFyeHyziMU9rXdY3vXeguckyfFr//KPC4aBvgJPjL30XlK+iTzFD7BLGPF7/jLewXHnOV9KQf+ubeuDEuDOj9lYMBLAAP4OAoawonnLXuZ0we51bOD7TZdZBo2S5O3I=

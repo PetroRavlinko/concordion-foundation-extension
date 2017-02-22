@@ -7,7 +7,7 @@
     <groupId>com.ravlinko.concordion.extension</groupId>
     <artifactId>concordion-foundation-extension</artifactId>
     <packaging>jar</packaging>
-    <version>0.0.0</version>
+    <version>0.0.4</version>
 
     <developers>
         <developer>
@@ -36,7 +36,7 @@
         <repository>
             <id>bintray-ravlinko-snapshots</id>
             <name>ravlinko-snapshots</name>
-            <url>https://api.bintray.com/maven/ravlinko/snapshots/travis-test/;publish=1</url>
+            <url>https://api.bintray.com/maven/ravlinko/snapshots/concordion-foundation-extension/;publish=1</url>
         </repository>
     </distributionManagement>
 
@@ -60,7 +60,7 @@
                     <username>${env.GIT_USER_ACCOUNT}</username>
                     <password>${env.GIT_PASSWORD}</password>
                     <tagBase>
-                        https://github.com/gilbertojrequena/travis-test/tags
+                        https://github.com/PetroRavlinko/concordion-foundation-extension/tags
                     </tagBase>
                     <tagNameFormat>v@{project.version}</tagNameFormat>
                 </configuration>
